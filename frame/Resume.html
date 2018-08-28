@@ -164,27 +164,27 @@
 		<script>
 		    (function(){
                 var oDiv=document.getElementById("float");
-				var oDiv2=document.getElementById("float2");
+		var oDiv2=document.getElementById("float2");
                 var H=0,iE6;
                 var Y=oDiv;
                 while(Y){
-				    H+=Y.offsetTop;
-					Y=Y.offsetParent
-				};
+			H+=Y.offsetTop;
+			Y=Y.offsetParent
+		};
                 iE6=window.ActiveXObject&&!window.XMLHttpRequest;
                 if(!iE6){
                     window.onscroll=function(){
                         var s=document.body.scrollTop||document.documentElement.scrollTop;
                         if(s>H){
-						    oDiv.className="col-xs-3 text-center img-responsive center-block div_left divgun2";
-							oDiv2.className="col-xs-9";oDiv2.style.marginRight="0px";oDiv2.style.paddingLeft="10px";
-						    if(iE6){
-							    oDiv.style.top=(s-H)+"px";
-				            }
-						}else{
-					         oDiv.className="col-xs-12 text-center img-responsive center-block div_left";
-							 oDiv2.className="col-xs-12";oDiv2.style.marginRight="15px";oDiv2.style.paddingLeft="0px";
-						}    
+				oDiv.className="col-xs-3 text-center img-responsive center-block div_left divgun2";
+				oDiv2.className="col-xs-9";oDiv2.style.marginRight="0px";oDiv2.style.paddingLeft="25px";
+				if(iE6){
+					oDiv.style.top=(s-H)+"px";
+				}
+				}else{
+					oDiv.className="col-xs-12 text-center img-responsive center-block div_left";
+					oDiv2.className="col-xs-12";oDiv2.style.marginRight="15px";oDiv2.style.paddingLeft="0px";
+				}    
                     };
                 }
             })();
